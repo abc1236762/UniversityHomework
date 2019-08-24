@@ -1,0 +1,3 @@
+# University Homework
+
+MIT License
