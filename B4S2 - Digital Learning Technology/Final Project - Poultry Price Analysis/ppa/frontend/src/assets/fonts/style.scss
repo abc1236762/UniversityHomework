@@ -1,0 +1,45 @@
+@import 'fontfaces.scss';
+
+code,
+kbd,
+pre,
+samp {
+  font-family: 'Fira Code', monospace !important;
+}
+
+// Reference: https://github.com/StylishThemes/Overlay-Scrollbars
+:root {
+  --custom-thumb-color: rgba(128, 128, 128, 0.5);
+  --custom-track-color: transparent;
+  --custom-width: thin;
+  --webkit-scrollbar-thumb-hover: rgba(128, 128, 128, 0.5);
+  --webkit-scrollbar-track-hover: transparent;
+  --webkit-scrollbar-width-height: 6px;
+  --webkit-scrollbar-border-radius: 3px;
+}
+*:not(select) {
+  scrollbar-color: var(--custom-thumb-color) var(--custom-track-color) !important;
+  scrollbar-width: var(--custom-width) !important;
+}
+::-webkit-scrollbar {
+  max-width: var(--webkit-scrollbar-width-height) !important;
+  max-height: var(--webkit-scrollbar-width-height) !important;
+  background: var(--custom-track-color) !important;
+}
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece {
+  background: var(--custom-track-color) !important;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--custom-thumb-color) !important;
+  border-radius: var(--webkit-scrollbar-border-radius) !important;
+}
+::-webkit-scrollbar-corner:hover,
+::-webkit-scrollbar-track:hover,
+::-webkit-scrollbar-track-piece:hover {
+  background: var(--webkit-scrollbar-track-hover) !important;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--webkit-scrollbar-thumb-hover) !important;
+}

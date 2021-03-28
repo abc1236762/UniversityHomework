@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    // Reference: https://vuejs.org/v2/cookbook/debugging-in-vscode.html
+    {
+      "type": "edge",
+      "request": "launch",
+      "name": "Vue.js: Edge",
+      "url": "http://localhost:8080",
+      "preLaunchTask": "npm: serve",
+      "webRoot": "${workspaceFolder}/src",
+      "breakOnLoad": true,
+      "sourceMapPathOverrides": {
+        "webpack:///src/*": "${webRoot}/*"
+      }
+    },
+    {
+      "type": "firefox",
+      "request": "launch",
+      "name": "Vue.js: Firefox",
+      "url": "http://localhost:8080",
+      "preLaunchTask": "npm: serve",
+      "webRoot": "${workspaceFolder}/src",
+      "pathMappings": [
+        {
+          "url": "webpack:///src/",
+          "path": "${webRoot}/"
+        }
+      ]
+    }
+  ]
+}

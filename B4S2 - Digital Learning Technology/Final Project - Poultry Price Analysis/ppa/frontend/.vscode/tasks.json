@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    // Reference: https://gist.github.com/glics/83bf4172f60931800fbd60e70e69793b
+    {
+      "type": "npm",
+      "script": "serve",
+      "label": "npm: serve",
+      "detail": "vue-cli-service serve",
+      "isBackground": true,
+      "problemMatcher": {
+        "pattern": {
+          "regexp": "^(( +ERROR.+)|(\\d+ (error(s)?|warning(s)?) (and \\d+ warning(s)? )?found.))$"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^ +INFO +Starting development server\\.\\.\\.$",
+          "endsPattern": "^((.+Compiled successfully in.+)|( +ERROR.+))$"
+        }
+      }
+    }
+  ]
+}
